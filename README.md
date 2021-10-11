@@ -1,3 +1,3 @@
 # github-actions-test
 
-hello 1 2
+hello 1 2 3
