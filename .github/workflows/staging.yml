@@ -58,4 +58,4 @@ jobs:
           token: "${{ github.token }}"
           target_url: http://my-cool-app.com
           state: "success"
-          deployment_id: ${{ steps.deployment_random.outputs.deployment_id }}
+          deployment_id: ${{ steps.deployment_test.outputs.deployment_id }}
