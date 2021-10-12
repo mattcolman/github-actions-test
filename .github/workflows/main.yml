@@ -2,8 +2,10 @@
 
 name: My Deployment flow
 
-# Controls when the action will run. 
-on: [push]
+on:
+  push:
+    branches:
+      - "main"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -34,6 +36,7 @@ jobs:
   deploy-to-prod:
     runs-on: ubuntu-18.04
     name: Deploy to Production
+    needs: [deploy-to-staging]
     steps: 
       - uses: chrnorm/deployment-action@releases/v1
         name: Create prod deployment
